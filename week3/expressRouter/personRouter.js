@@ -44,4 +44,25 @@ let person = [
      })
 
 
+    .put((req,res) =>{
+        const personId = req.params.personId;
+        const personIndex = person.findIndex(person =>person._Id  === personId);
+        const updatedPersonResource = Object.assign(person[personIndex], req.body);
+
+        res.send('updated bounty data')
+       
+})
+
+
+
+.delete((req,res) => {
+    const personId = req.params.personId;
+    const personIndex = person.findIndex(person =>person._Id  === personId);
+    person.splice(personIndex);
+
+    res.send('delete completed!')
+})
+
+
+
   module.exports = personRouter;
