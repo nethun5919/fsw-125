@@ -1,0 +1,38 @@
+.navbar {
+    overflow:hidden;
+    background-color: #d34ad3;
+    position:fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  body {
+    margin: 20px;
+    text-align: center;
+    background-color:rgb(203, 173, 233)
+}
+.h1 {
+    color:rgb(0, 16, 26);
+} 
+
+
+
+.img {
+    float: left; 
+   }
+
+
+.p {
+ 
+  height:170px;
+  margin-right:150px;
+  padding:0%;
+  text-align:center;
+  
+}
+
+@media screen and (max-width: 600px) {
+    body {
+      background-color: rgb(55, 196, 214);
+      color: white;
+    }

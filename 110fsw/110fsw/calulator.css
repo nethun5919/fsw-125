@@ -1,0 +1,26 @@
+
+body {
+    background:blueviolet;
+
+}
+* {
+    box-sizing:border-box;
+}
+
+.wrap {
+    width: 400px;
+    margin: auto;
+    height: auto;
+    background: skyblue;
+    padding: 15px;
+
+}
+
+input [type= "text"]{
+    width: 100%;
+    padding: 100%;
+    font-size: 22px;
+    font-weight: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
