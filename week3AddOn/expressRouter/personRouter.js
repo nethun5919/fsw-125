@@ -14,7 +14,7 @@ let person = [
 },
 {
     fname: 'Calvin',
-    lname: 'Hobs',
+    lname: 'Hobs', 
     living: true,
     bountyAmount:139,
     type: 'Jedi',
@@ -39,17 +39,23 @@ let person = [
 
    .post((req, res) => {
        const newPerson = req.body;
+       newPerson._id = uuid();
         person.push(newPerson);
        res.send('Adding new ${newPerson} to bounty')
      })
 
-
+personRouter.route('/:personId')
+.get((req,res) =>{
+    const personId = req.params.personId;
+    const personName = person.find(person =>person._id  === personId);
+    res.send(personName)
+}) 
     .put((req,res) =>{
         const personId = req.params.personId;
-        const personIndex = person.findIndex(person =>person._Id  === personId);
+        const personIndex = person.findIndex(p =>p._id  === personId);
         const updatedPersonResource = Object.assign(person[personIndex], req.body);
 
-        res.send('updated bounty data')
+        res.send(updatedPersonResource)
        
 })
 
@@ -57,8 +63,8 @@ let person = [
 
 .delete((req,res) => {
     const personId = req.params.personId;
-    const personIndex = person.findIndex(person =>person._Id  === personId);
-    person.splice(personIndex);
+    const personIndex = person.findIndex(p =>p._id  === personId);
+    person.splice(personIndex, 1);
 
     res.send('delete completed!')
 })

@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const todoRouter = require('./personRouter');
+const personRouter = require('./personRouter');
 
 
 app.use(express.json())
