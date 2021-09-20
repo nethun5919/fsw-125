@@ -50,25 +50,25 @@ personRouter.route('/:personId')
     const personName = person.find(person =>person._id  === personId);
     res.send(personName)
 }) 
-//     .put((req,res) =>{
-//         const personId = req.params.personId;
-//         const personIndex = person.findIndex(p =>p._id  === personId);
-//         const updatedPersonResource = Object.assign(person[personIndex], req.body);
+     .put((req,res) =>{
+        const personId = req.params.personId;
+         const personIndex = person.findIndex(p =>p._id  === personId);
+         const updatedPersonResource = Object.assign(person[personIndex], req.body);
 
-//         res.send(updatedPersonResource)
+        res.send(updatedPersonResource)
        
-// })
+ })
 
 
 
-// .delete((req,res) => {
-//     const personId = req.params.personId;
-//     const personIndex = person.findIndex(p =>p._id  === personId);
-//     person.splice(personIndex, 1);
+ .delete((req,res) => {
+     const personId = req.params.personId;
+     const personIndex = person.findIndex(p =>p._id  === personId);
+     person.splice(personIndex, 1);
 
-//     res.send('delete completed!')
-// })
+     res.send('delete completed!')
+ })
 
 
 
-//   module.exports = personRouter;
+   module.exports = personRouter;
