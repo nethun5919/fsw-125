@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "dependencies": {
     "axios": "^0.24.0",
     "dotenv": "^10.0.0",
@@ -9,5 +10,12 @@
     "mongoose": "^6.0.14",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.15"
+=======
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+>>>>>>> 101786335d9819501be08b32c0c10d6ffdd92355
   }
 }
